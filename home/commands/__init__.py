@@ -1,15 +1,17 @@
 import requests
-from ascii import *
+from home.ascii import *
+from colorama import Fore
+
 class Commands:
-    def __init__(self, name, password):
+    def __init__(self, name):
         self.name = name
-        self.password = password
 
     def search(r):
         for key, value in r.items():
-            print(f"{az}{key} {br}=> {vm}{value} ")
+            print(f"{Fore.BLUE}{key} {Fore.WHITE}=> {Fore.RED}{value} ")
 
     def cep(self, cep):
         r = requests.get(f"https://viacep.com.br/ws/{cep}/json/").json()
         Commands.search(r)
+        back()
     
