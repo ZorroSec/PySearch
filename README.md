@@ -38,5 +38,5 @@
 ```
 
 <div aling='center'>
-    <h3>&copy;ZZorroSec</h3>
+    <h3>&copy;ZorroSec</h3>
 </div>
