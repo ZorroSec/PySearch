@@ -1,5 +1,5 @@
 from logo import logo
-from ascii import Ascii
+from ascii import *
 
 line = '-' * 56
 
@@ -16,5 +16,8 @@ class Home:
         print(logo)
         for c, key in enumerate(functions.keys()):
             print(f"[{c+1}] {key}")
+        opc = input('> ')
+        clear()
+        
 
 Home("zorro").menu()
