@@ -1,13 +1,8 @@
 import os
 import time
-
-
-class Ascii:
-    def __init__(self):
-        pass
+   
+def clear():
+    return os.system("clear")
     
-    def clear(self):
-        return os.system("clear")
-    
-    def time(self):
-        return time.sleep(0.225)
+def time():
+    return time.sleep(0.225)
