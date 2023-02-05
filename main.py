@@ -1,5 +1,5 @@
 import requests
-from ascii import *
-from commands import Commands
-from home import Home
+from __init__ import Home
+from home.logo.logo import logo
 
+Home("zorro").menu()

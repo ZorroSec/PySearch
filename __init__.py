@@ -1,7 +1,8 @@
-from logo import logo
-from ascii import *
+from home.logo.logo import logo
+from home.ascii import clear
 
 line = '-' * 56
+
 
 class Home:
     def __init__(self, name):
@@ -18,6 +19,6 @@ class Home:
             print(f"[{c+1}] {key}")
         opc = input('> ')
         clear()
+        print(f"{logo}")
+        print(line)
         
-
-Home("zorro").menu()
