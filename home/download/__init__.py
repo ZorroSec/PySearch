@@ -1,7 +1,7 @@
 from pytube import YouTube, streams
 from pytube.cli import on_progress
 from colorama import Fore
-from home.ascii import back, clear, time
+from home.ascii import back
 import sys
 
     
