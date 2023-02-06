@@ -20,6 +20,7 @@ class Commands:
         r = requests.get(f"https://viacep.com.br/ws/{cep}/json/").json()
         Commands.search(r)
         back()
+        
     def ddd(self):
         print(logo)
         print(line)
@@ -28,6 +29,7 @@ class Commands:
         r = requests.get(f"https://brasilapi.com.br/api/ddd/v1/{ddd}").json()
         Commands.search(r)
         back()
+        
     def cnpj(self):
         print(logo)
         print(line)
