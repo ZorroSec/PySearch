@@ -10,7 +10,7 @@ class Home:
     
     def menu(self):
         functions = {
-            "searchs": ["Cep", "Cnpj", "Ip", "Yt Download"],
+            "searchs": ["Cep", "Cnpj", "Ip", "Yt Download", "Ddd", "Cotation", "Login"],
             "generators": ["Cep", "Cnpj", "cpf", "Name"]
         }
         
