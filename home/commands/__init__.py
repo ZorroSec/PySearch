@@ -14,4 +14,6 @@ class Commands:
         r = requests.get(f"https://viacep.com.br/ws/{cep}/json/").json()
         Commands.search(r)
         back()
+    def ddd(self, ddd):
+        return {}
     
