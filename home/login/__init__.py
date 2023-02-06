@@ -1,9 +1,9 @@
 from colorama import Fore
 
-class Login:
-    def __init__(self, name):
-        self.name = name
-    
-    def writeData(self, name):
+def login():
+    username = input(f"{Fore.GREEN}Username > ")
+    if username:
+        print(f"{Fore.LIGHTBLACK_EX} Ola {username}")
         with open('data.txt', 'w') as file:
-            file.write(name)
+            file.write(username)
+        
