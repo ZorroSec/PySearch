@@ -1,22 +1,21 @@
 from pytube import YouTube, streams
 from pytube.cli import on_progress
 from colorama import Fore
+from home.ascii import back, clear, time
+import sys
 
-class YtDownload:
-    def __init__(self, link, yt, ys):
-        self.link = link
-        self.yt = yt
-        self.ys = ys
     
-    def download(self): 
-        self.ys.download()
-    
-    def ytdownload(self):
-        print(f"{Fore.GREEN}Title => {Fore.BLACK}{self.yt.title}")
-        print(f"{Fore.GREEN}Downloading...")
+def download():
+    link = input(f"{Fore.CYAN} link >{Fore.RESET} ")
+    op = input(f"do you really want to download this file? {Fore.LIGHTGREEN_EX}Y{Fore.LIGHTBLACK_EX}/{Fore.LIGHTRED_EX}N {Fore.LIGHTMAGENTA_EX}~> {Fore.RESET}")
+    yt = YouTube(link, on_progress_callback=on_progress)
+    ys = yt.streams.get_highest_resolution()
+    if op == "y" or "Y":
+        print(f"{Fore.LIGHTGREEN_EX}Downloading!!")
+        ys.download()
+        back()
+    else:
+        print(f"{Fore.LIGHTRED_EX}Exit!!")
+        sys.exit()
 
-link = "https://youtu.be/Z1GNW_woXI0"
-yt = YouTube(link, on_progress_callback=on_progress)
-ys = yt.streams.get_highest_resolution()
-YtDownload(link, yt, ys).ytdownload()
-YtDownload(link, yt, ys).download()
+download()
