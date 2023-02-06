@@ -13,8 +13,13 @@ while True:
         if opc == "1":
             if inpt == "1":
                 clear()
-                Commands(None).cep("01001000")
-                
+                Commands(None).cep()
+            elif inpt == "2":
+                clear()
+                Commands(None).cnpj()
+            elif inpt == "3":
+                clear()
+                Commands(None).ddd()
     except KeyboardInterrupt:
         print("e")
         sys.exit()

@@ -8,7 +8,7 @@ def back():
 {Fore.GREEN}<<  {Fore.BLACK}[01]  {Fore.WHITE}Back       {Fore.GREEN}>>
 {Fore.GREEN}<<  {Fore.BLACK}[02]  {Fore.WHITE}Exit       {Fore.GREEN}>>
 {Fore.BLACK}<<------------------->>
-{Fore.RED}> {Fore.WHITE}1""")
+{Fore.RED}> {Fore.WHITE}""")
     if back == "2":
         exit()
 
