@@ -1,0 +1,4 @@
+{
+    "cep": "https://brasilapi.com.br/api/cep/v1/{cep}",
+    "cnpj": "https://brasilapi.com.br/api/cnpj/v1/{cnpj}"
+}
