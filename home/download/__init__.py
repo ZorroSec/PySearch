@@ -17,5 +17,3 @@ def download():
     else:
         print(f"{Fore.LIGHTRED_EX}Exit!!")
         sys.exit()
-
-download()
