@@ -38,5 +38,3 @@ class Commands:
         r = requests.get(f"https://brasilapi.com.br/api/cnpj/v1/{cnpj}").json()
         Commands.search(r)
         back()
-    
-    
