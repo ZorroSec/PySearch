@@ -20,6 +20,9 @@ while True:
             elif inpt == "3":
                 clear()
                 Commands(None).ddd()
+            elif inpt == "4":
+                clear()
+                Commands(None).ip()
     except KeyboardInterrupt:
         print("e")
         back()

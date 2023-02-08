@@ -3,14 +3,12 @@ from home.ascii import *
 from colorama import Fore
 from home.logo.logo import logo
 from home import line
+from home.search import search
 
 class Commands:
     def __init__(self, name):
         self.name = name
 
-    def search(r):
-        for key, value in r.items():
-            print(f"{Fore.BLUE}{key} {Fore.WHITE}=> {Fore.RED}{value} ")
 
     def cep(self):
         print(logo)
@@ -18,7 +16,7 @@ class Commands:
         cep = input(f"{Fore.LIGHTBLUE_EX} CEP {Fore.LIGHTBLACK_EX}> ")
         print(line)
         r = requests.get(f"https://viacep.com.br/ws/{cep}/json/").json()
-        Commands.search(r)
+        search(r)
         back()
         
     def ddd(self):
@@ -27,7 +25,7 @@ class Commands:
         ddd = input(f"{Fore.LIGHTBLUE_EX} DDD {Fore.LIGHTBLACK_EX}> ")
         print(line)
         r = requests.get(f"https://brasilapi.com.br/api/ddd/v1/{ddd}").json()
-        Commands.search(r)
+        search(r)
         back()
         
     def cnpj(self):
@@ -36,5 +34,14 @@ class Commands:
         cnpj = input(f"{Fore.LIGHTBLUE_EX} CNPJ {Fore.LIGHTBLACK_EX}>")
         print(line)
         r = requests.get(f"https://brasilapi.com.br/api/cnpj/v1/{cnpj}").json()
-        Commands.search(r)
+        search(r)
+        back()
+    
+    def ip(self):
+        print(logo)
+        print(line)
+        ip = input(f"{Fore.LIGHTBLUE_EX} IP {Fore.LIGHTBLACK_EX}>")
+        print(line)
+        r = requests.get(f"http://ip-api.com/json/{ip}").json()
+        search(r)
         back()
