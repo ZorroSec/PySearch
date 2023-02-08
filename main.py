@@ -5,6 +5,7 @@ from __init__ import menu
 from home.ascii import clear, time, back
 from home.logo.logo import logo
 from colorama import Fore
+from home.download import download
 
 while True:
     try:
@@ -23,6 +24,9 @@ while True:
             elif inpt == "4":
                 clear()
                 Commands(None).ip()
+            elif inpt == "5":
+                clear()
+                download()                
     except KeyboardInterrupt:
         print("e")
         back()
