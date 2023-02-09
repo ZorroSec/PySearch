@@ -45,3 +45,11 @@ class Commands:
         r = requests.get(f"http://ip-api.com/json/{ip}").json()
         search(r)
         back()
+    
+    def cot(self):
+        print(logo)
+        print(line)
+        cot = requests.get("https://economia.awesomeapi.com.br/last/BTC-BRL").json()
+        search(cot)
+        print(line)
+        back()

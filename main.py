@@ -26,7 +26,10 @@ while True:
                 Commands(None).ip()
             elif inpt == "5":
                 clear()
-                download()                
+                download()
+            elif inpt == "6":
+                clear()
+                Commands(None).cot()                
     except KeyboardInterrupt:
         print("e")
         back()
